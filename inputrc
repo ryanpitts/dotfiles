@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# copy this to user's home dir as .inputrc
+# http://www.tldp.org/LDP/lfs/LFS-BOOK-6.1.1-HTML/chapter07/inputrc.html
+
+# Use case-insensitive TAB autocompletion
+set completion-ignore-case on
+
+# Make TAB cycle through possible completions
+"\t": menu-complete
+
+# Use the string that has already been typed as the prefix for searching
+# through commands (i.e. more intelligent Up/Down behavior)
+"\e[B": history-search-forward
+"\e[A": history-search-backward
